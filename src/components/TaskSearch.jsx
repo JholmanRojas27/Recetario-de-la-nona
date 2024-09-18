@@ -8,7 +8,6 @@ function TaskSearch({setSearchQuery}) {
           placeholder='Buscar receta ...'
           onChange={(e) =>console.log('Escribistes: ', e.target.value)}
         />
-        <button>Buscar</button>
       </div>
     );
   }

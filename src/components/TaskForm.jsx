@@ -14,11 +14,16 @@ function TaskForm(){
         console.log('receta: ',newReceta)
         console.log('Categoria: ',categoria)
         console.log('Ingredientes: ',ingrediente)
-        console.log('tiempo: ',setTiempo)
+        console.log('tiempo: ',tiempo)
         console.log('Dificultad: ',dificultad)
 
         addTask({
-            create: new Date().toISOString()
+            create: new Date().toISOString(),
+            receta: newReceta,
+            categoria: categoria,
+            ingrediente: ingrediente,
+            tiempo: tiempo,
+            dificultad: dificultad,
         })
         console.log('Receta agregada')
     }
