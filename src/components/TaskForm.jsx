@@ -23,7 +23,7 @@ function TaskForm(){
         console.log('Receta agregada')
     }
     return(
-        <form>
+        <form className='task-form' onSubmit={(e)=> handleSubmit(e)}>
             <input
                 type='text'
                 placeholder='Nombre receta'
