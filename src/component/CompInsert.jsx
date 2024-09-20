@@ -11,6 +11,8 @@ function CompInsert(){
     const [ingrediente, setIngrediente] = useState('')
     const [tiempo, setTiempo] = useState('')
     const [dificultad, setDificultad] = useState('')
+    const [preparacion, setPreparacion] = useState('')
+
 
     const onSutmuit = (e) => {
         e.preventDefault()
@@ -25,6 +27,7 @@ function CompInsert(){
         console.log('Ingredientes: ',ingrediente)
         console.log('tiempo: ',tiempo)
         console.log('Dificultad: ',dificultad)
+        console.log('Preparacion: ',preparacion)
 
         addTask({
             create: new Date().toISOString(),
@@ -33,6 +36,7 @@ function CompInsert(){
             ingrediente: ingrediente,
             tiempo: tiempo,
             dificultad: dificultad,
+            preparacion: preparacion,
         })
         console.log('Receta agregada')
     }
@@ -70,7 +74,8 @@ function CompInsert(){
             <button 
                 type='submit' 
                 className='btn-insert'
-                onClick={()=>navigate('/insert/')}
+                //onClick={()=>navigate('/insert/')}
+                onClick={console.log('Funcionamiento del boton ok')}
                 >
                 AGREGAR
             </button>
