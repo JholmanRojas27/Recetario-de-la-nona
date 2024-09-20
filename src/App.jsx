@@ -19,9 +19,6 @@ function App() {
     <Cabecera/>
     <TaskSearch/>
     <TaskForm/>
-    {/*
-    <TaskRecetasNuevas tasks = {tasks}/>
-    */}
     </>
   )
 }
