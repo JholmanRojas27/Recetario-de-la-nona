@@ -5,27 +5,48 @@
     width: 400px;
     padding: 10px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .comp-insert input{
-    width: 400px;
+    width: 100%;
     padding: 10px;
-    margin: auto;
-    margin-top: 50px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .comp-insert select{
-    width: 400px;
+    width: 100%;
     padding: 10px;
-    margin: auto;
-    margin-top: 50px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .comp-insert textarea{
-    width: 400px;
-    padding: 10 px;
-    margin: auto;
-    margin-top: 50px;
-
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
 }
+
+.btn-insert{
+    background-color: green;
+    color: white;
+}
+.btn-prew{
+    background-color: red;
+    color: black;
+}
+
