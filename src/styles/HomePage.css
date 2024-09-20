@@ -1,3 +1,8 @@
 .homepage form{
     align-items: center;
 }
+
+.homepage button{
+    background-color: green;
+    color: white;
+}

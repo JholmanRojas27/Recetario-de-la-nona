@@ -3,6 +3,7 @@ import CompInsert from "../component/CompInsert";
 import CompSearch from "../component/CompSearch";
 import '../styles/HomePage.css'
 import CompHeader from "../component/CompHeader";
+import CompForm from "../component/CompForm";
 
 
 
@@ -18,6 +19,7 @@ function HomePage(){
             <CompHeader/>
             <CompSearch/>
             <button onClick={(e) => onSutmuit(e)}>AGREGAR RECETA</button>
+            <CompForm/> 
         </form>
     )
 }
