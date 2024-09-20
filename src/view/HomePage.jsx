@@ -1,0 +1,26 @@
+import { useNavigate } from "react-router-dom";
+import CompInsert from "../component/CompInsert";
+import CompSearch from "../component/CompSearch";
+import '../styles/HomePage.css'
+import CompHeader from "../component/CompHeader";
+
+
+
+function HomePage(){
+    const navigate = useNavigate()
+    const onSutmuit = (e) => {
+        e.preventDefault()
+        navigate('/insert')
+    }
+
+    return(
+        <form className="homepage">
+            <CompHeader/>
+            <CompSearch/>
+            <button onClick={(e) => onSutmuit(e)}>AGREGAR RECETA</button>
+        </form>
+    )
+}
+
+
+export default HomePage;

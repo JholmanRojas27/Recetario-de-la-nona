@@ -1,26 +1,22 @@
-import Cabecera from './components/Cabecera'
-import TaskSearch from './components/taskSearch'
-import TaskForm from './components/TaskForm'
-import TaskRecetasNuevas from './components/TaskRecetasNuevas'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import {BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
+import HomePage from './view/HomePage';
+import CompSearch from './component/CompSearch';
+import CompInsert from './component/CompInsert';
+import './index.css'
 
-function App() {
-  const [tasks, setNewTasks] = useState([]);
 
-  const addTask = (task) => {
-    setNewTasks([...tasks, task])
-  }
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path='/' element={
+          <HomePage/>}
+          />
+        <Route path='/insert/' element ={<CompInsert/>}/>
+      </Routes>
+    </Router>
+  );
+};
 
-  return(
-    <>
-    <Cabecera/>
-    <TaskSearch/>
-    <TaskForm/>
-    </>
-  )
-}
-
-export default App
+export default App;
