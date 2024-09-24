@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import CompInsert from "../component/CompInsert";
+//import CompInsert from "../component/CompInsert";
 import CompSearch from "../component/CompSearch";
 import '../styles/HomePage.css';
 import CompHeader from "../component/CompHeader";
-import CompForm from "../component/CompForm";
+//import CompForm from "../component/CompForm";
 import StarRating from "../component/StarRating"; // Importa el componente de estrellas
 
 const initialRecetas = [
@@ -88,8 +88,6 @@ function HomePage() {
                     </div>
                 ))}
             </div>
-
-            <CompForm />
         </div>
     );
 }
