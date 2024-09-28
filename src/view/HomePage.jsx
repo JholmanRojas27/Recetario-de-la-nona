@@ -1,10 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-//import CompInsert from "../component/CompInsert";
-import CompSearch from "../component/CompSearch";
 import '../styles/HomePage.css';
 import CompHeader from "../component/CompHeader";
-//import CompForm from "../component/CompForm";
 import StarRating from "../component/StarRating"; // Importa el componente de estrellas
 
 const initialRecetas = [
@@ -41,11 +38,19 @@ function setupRecetasInLocalStorage() {
     if (!localStorage.getItem('recetas')) {
         localStorage.setItem('recetas', JSON.stringify(initialRecetas));
     }
-}
+};
+
 
 function HomePage() {
     const navigate = useNavigate();
     const [recetas, setRecetas] = useState([]);
+
+    const eliminarReceta = (recetaId) => {
+        const nuevasRecetas= recetas.filter(item => item.id !== recetaId);
+        if (nuevasRecetas !== -1) {
+          setRecetas(nuevasRecetas);
+        }
+      };
 
     useEffect(() => {
         setupRecetasInLocalStorage();
@@ -97,6 +102,7 @@ function HomePage() {
                             rating={receta.rating} 
                             setRating={(newRating) => updateRating(index, newRating)} 
                         />
+                        <button>ELIMINAR</button>
                     </div>
                 ))}
             </div>
