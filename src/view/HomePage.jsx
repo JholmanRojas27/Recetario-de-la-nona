@@ -65,14 +65,26 @@ function HomePage() {
         localStorage.setItem('recetas', JSON.stringify(updatedRecetas));
     };
 
+    const [busqueda, setBusqueda] = useState('');
+
+    const recetasFiltrados = recetas.filter(recetas =>
+        recetas.nombre.toLowerCase().includes(busqueda.toLowerCase())
+    );
     return (
         <div className="homepage">
             <CompHeader />
-            <CompSearch />
+        <form>
+            <div className='comp-search'>
+                <input
+                type='text'
+                placeholder='Buscar receta...'
+                onChange={(e)=>setBusqueda(e.target.value)}/>
+            </div>
+        </form>
             <button onClick={(e) => onSutmuit(e)}>AGREGAR RECETA</button>
 
             <div className="recetas-container">
-                {recetas.map((receta, index) => (
+                {recetasFiltrados.map((receta, index) => (
                     <div key={index} className="receta-card">
                         <h3>{receta.nombre}</h3>
                         <p><strong>Categoría:</strong> {receta.categoria}</p>

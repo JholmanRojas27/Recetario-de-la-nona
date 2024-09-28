@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import '../styles/CompSearch.css'
 
-function CompSearch({recetas}){
+const CompSearch=({recetas})=> {
 
     const [busqueda, setBusqueda] = useState('');
 
-    {/*const reetasFiltrados = reetas.filter(recetas =>
+    const recetasFiltrados = recetas.filter(recetas =>
         recetas.nombre.toLowerCase().includes(busqueda.toLowerCase())
-    );*/}
+    );
     
     return(
         <form>
@@ -15,7 +15,7 @@ function CompSearch({recetas}){
                 <input
                 type='text'
                 placeholder='Buscar receta...'
-                onChange={(e)=>e.setBusqueda(e.target.value)}/>
+                onChange={(e)=>setBusqueda(e.target.value)}/>
             </div>
         </form>
     )
